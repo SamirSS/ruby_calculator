@@ -28,7 +28,7 @@ def simple_calc
   on = true
   
   while (on == true) do
-    puts "Enter math equation on separate lines: "
+    puts "Enter math symbol followed by the number: "
     puts "Your total is #{total}"
     sign = gets.chomp
     if sign == "exit"
@@ -37,20 +37,15 @@ def simple_calc
     num1 = gets.chomp
     num1 = num1.to_f
     if sign == "+"
-      total = total + num1
-      addition(num1, total)
+      total = addition(num1, total)
     elsif sign == "-"
-      total = total - num1
-      subtraction(total, num1)
+      total = subtraction(total, num1)
     elsif sign == "*"
-      total = total * num1
-      multiplication(num1, total)
+      total = multiplication(num1, total)
     elsif sign == "/"
-      total = total / num1
-      division(total, num1)
+      total = division(total, num1)
     elsif sign == "^"
-      total = total ** num1
-      exponential(total, num1)
+      total = exponential(total, num1)
     else
       puts "Unavailable"
     end
